@@ -1,0 +1,99 @@
+{
+  "apiVersion" : "v1",
+  "kind" : "Service",
+  "metadata" : {
+    "annotations" : {
+      "jkube.io/git-branch" : "master",
+      "jkube.io/git-commit" : "374f8b8d2c358f37c95381b56952f1f0dc01ab2b",
+      "jkube.io/git-url" : "https://github.com/krishnamurthypradeep/spring-boot-devops.git",
+      "jkube.io/scm-tag" : "v0.0.1",
+      "jkube.io/scm-url" : "git@github.com:krishnamurthypradeep/spring-boot-devops.git",
+      "prometheus.io/path" : "/metrics",
+      "prometheus.io/port" : "9779",
+      "prometheus.io/scrape" : "true"
+    },
+    "creationTimestamp" : "2022-05-17T10:54:23Z",
+    "labels" : {
+      "app" : "spring-boot-devops",
+      "group" : "spring-boot-devops",
+      "provider" : "jkube",
+      "version" : "0.0.1-SNAPSHOT"
+    },
+    "managedFields" : [ {
+      "apiVersion" : "v1",
+      "fieldsType" : "FieldsV1",
+      "fieldsV1" : {
+        "f:metadata" : {
+          "f:annotations" : {
+            "." : { },
+            "f:jkube.io/git-branch" : { },
+            "f:jkube.io/git-commit" : { },
+            "f:jkube.io/git-url" : { },
+            "f:jkube.io/scm-tag" : { },
+            "f:jkube.io/scm-url" : { },
+            "f:prometheus.io/path" : { },
+            "f:prometheus.io/port" : { },
+            "f:prometheus.io/scrape" : { }
+          },
+          "f:labels" : {
+            "." : { },
+            "f:app" : { },
+            "f:group" : { },
+            "f:provider" : { },
+            "f:version" : { }
+          }
+        },
+        "f:spec" : {
+          "f:externalTrafficPolicy" : { },
+          "f:internalTrafficPolicy" : { },
+          "f:ports" : {
+            "." : { },
+            "k:{\"port\":7070,\"protocol\":\"TCP\"}" : {
+              "." : { },
+              "f:name" : { },
+              "f:nodePort" : { },
+              "f:port" : { },
+              "f:protocol" : { },
+              "f:targetPort" : { }
+            }
+          },
+          "f:selector" : { },
+          "f:sessionAffinity" : { },
+          "f:type" : { }
+        }
+      },
+      "manager" : "okhttp",
+      "operation" : "Update",
+      "time" : "2022-05-17T10:54:23Z"
+    } ],
+    "name" : "spring-boot-devops",
+    "namespace" : "default",
+    "resourceVersion" : "2177",
+    "uid" : "5fc91983-7f3a-4059-8873-14691016f015"
+  },
+  "spec" : {
+    "clusterIP" : "10.110.226.118",
+    "externalTrafficPolicy" : "Cluster",
+    "ports" : [ {
+      "name" : "arcp",
+      "nodePort" : 31371,
+      "port" : 7070,
+      "protocol" : "TCP",
+      "targetPort" : 7070
+    } ],
+    "selector" : {
+      "app" : "spring-boot-devops",
+      "group" : "spring-boot-devops",
+      "provider" : "jkube"
+    },
+    "sessionAffinity" : "None",
+    "type" : "NodePort",
+    "clusterIPs" : [ "10.110.226.118" ],
+    "ipFamilies" : [ "IPv4" ],
+    "ipFamilyPolicy" : "SingleStack",
+    "internalTrafficPolicy" : "Cluster"
+  },
+  "status" : {
+    "loadBalancer" : { }
+  }
+}

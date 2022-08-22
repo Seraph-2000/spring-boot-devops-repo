@@ -1,0 +1,10 @@
+server:
+  port: 8090
+  
+spring:
+  
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+       
